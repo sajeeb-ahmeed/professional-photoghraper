@@ -1,0 +1,16 @@
+.navlinks {
+    margin: auto;
+}
+
+.navlinks a {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nav_socials a {
+    font-size: 20px;
+}
+
+.fosvimeoi {
+    font-size: 24px;
+}
