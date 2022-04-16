@@ -1,15 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Pages/Shared/Header/Header';
-import Banner from './Pages/Banner/Banner';
+import Home from './Pages/Home/Home';
+import { Route, Routes } from 'react-router-dom';
+import Services from './Pages/Home/Services/Services';
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Banner></Banner>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/services' element={<Services></Services>}></Route>
+      </Routes>
+
     </div>
   );
 }

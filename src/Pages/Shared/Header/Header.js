@@ -5,28 +5,29 @@ import './Header.css'
 import { VscTwitter } from 'react-icons/vsc';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { TiSocialVimeo } from 'react-icons/ti';
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div>
 
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container >
-                    <Navbar.Brand className='mx-auto brand' href="#home"><img className='img-fluid ' src={logo} alt="" /></Navbar.Brand>
+                    <Navbar.Brand className='mx-auto brand' ><img className='img-fluid ' src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
                         </Nav>
                         <Nav className='navlinks'>
-                            <Nav.Link href="#deets">Home</Nav.Link>
-                            <Nav.Link href="#deets">Services</Nav.Link>
-                            <Nav.Link href="#memes">
+                            <Nav.Link as={Link} to='/home'>Home</Nav.Link>
+                            <Nav.Link as={Link} to='/services'>Services</Nav.Link>
+                            <Nav.Link as={Link} to='/blogs'>
                                 Blogs
                             </Nav.Link>
-                            <Nav.Link href="#memes">
+                            <Nav.Link as={Link} to='/about'>
                                 About me
                             </Nav.Link>
-                            <Nav.Link href="#memes">
+                            <Nav.Link as={Link} to='/login'>
                                 Login
                             </Nav.Link>
                         </Nav>
