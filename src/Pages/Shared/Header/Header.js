@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import logo from '../../../images/logo-main.png';
+import logo from '../../../images/logo.png';
 import './Header.css'
 import { VscTwitter } from 'react-icons/vsc';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
@@ -9,15 +9,16 @@ const Header = () => {
     return (
         <div>
 
-            <Navbar collapseOnSelect expand="lg" bg="ligth" variant="light">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container >
-                    <Navbar.Brand className='mx-auto' href="#home"><img className='w-75' src={logo} alt="" /></Navbar.Brand>
+                    <Navbar.Brand className='mx-auto brand' href="#home"><img className='img-fluid ' src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
                         </Nav>
                         <Nav className='navlinks'>
+                            <Nav.Link href="#deets">Home</Nav.Link>
                             <Nav.Link href="#deets">Services</Nav.Link>
                             <Nav.Link href="#memes">
                                 Blogs
@@ -30,7 +31,7 @@ const Header = () => {
                             </Nav.Link>
                         </Nav>
 
-                        <Nav className=' mx-auto nav_socials'>
+                        <Nav className='d-none d-lg-flex mx-auto nav_socials'>
                             <Nav.Link>
                                 <VscTwitter></VscTwitter>
                             </Nav.Link>
