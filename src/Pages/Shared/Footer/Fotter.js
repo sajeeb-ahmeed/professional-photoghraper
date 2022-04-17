@@ -3,20 +3,23 @@ import { VscTwitter } from 'react-icons/vsc';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { TiSocialVimeo } from 'react-icons/ti';
 import { Nav } from 'react-bootstrap';
+import massiologo from '../../../images/photoghraper/massio1.png'
 const Fotter = () => {
+    const getYears = new Date();
+    let year = getYears.getFullYear();
     return (
-        <div className='container-fluid bg-dark text-light text-center'>
+        <div className='container-fluid pb-2 bg-dark text-light text-center'>
             <div className='container'>
-                <div className="row py-5 text-center">
+                <div className="row footer py-5 text-center">
                     <div className="col-md-4 col-12">
-                        <p>© 2019 Missio. All rights reserved.</p>
+                        <p>&copy; {year} Missio. All rights reserved. <br /> Develop By <span className='text-muted'>SaJeeb Ahmed</span> </p>
                     </div>
                     <div className="col-md-4 col-12">
-
+                        <img style={{ width: '110px', height: '55px' }} className='img-fluid imgs' src={massiologo} alt="" />
                     </div>
-                    <div className="col-md-4 col-12 nav_socials">
+                    <div className="col-md-4 col-12 nav_socials mx-auto">
                         <Nav className='links'>
-                            <Nav.Link>
+                            <Nav.Link className='ms-3'>
                                 <VscTwitter></VscTwitter>
                             </Nav.Link>
                             <Nav.Link >

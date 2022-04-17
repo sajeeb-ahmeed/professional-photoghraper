@@ -25,3 +25,9 @@ h6 {
 .imgs2 {
   cursor: pointer;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

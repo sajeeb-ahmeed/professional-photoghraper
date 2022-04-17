@@ -14,6 +14,8 @@
 
 .links a {
     color: #d7d2d2a5 !important;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .links a:hover {

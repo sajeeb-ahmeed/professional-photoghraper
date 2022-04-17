@@ -6,6 +6,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai';
 import { FiFlag } from 'react-icons/fi';
 import { AiFillStar } from 'react-icons/ai';
 import { BsAward, BsAwardFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 const Photoghraper = () => {
     return (
         <div className="container-fluid bg-photghraper">
@@ -42,7 +43,9 @@ const Photoghraper = () => {
                             </div>
 
                             <div className="col-md-5 col-12 ">
-                                <img src={followPng} className='imgs' alt="" />
+                                <Link to='/direct_message'>
+                                    <img src={followPng} className='imgs' alt="" />
+                                </Link>
                             </div>
                         </div>
                     </div>

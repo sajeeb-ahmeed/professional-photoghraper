@@ -6,7 +6,7 @@ import './Checkout.css'
 
 const Checkout = () => {
     const { name } = useParams();
-    console.log(name);
+
     return (
         <div className="container-fluid bg-photghraper py-2">
             <div className='container mx-auto text-center '>

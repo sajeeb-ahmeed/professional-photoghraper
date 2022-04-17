@@ -13,7 +13,7 @@ const Service = ({ singleService }) => {
     return (
         <div >
             <Card className='cards'>
-                <Card.Img className='img-fluid imgs cards' variant="top" src={img} />
+                <Card.Img onClick={() => navigateToServiceDetails(name)} className='img-fluid imgs cards' variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
