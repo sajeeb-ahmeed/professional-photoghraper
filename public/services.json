@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "ENAGEMENT",
+        "price": "300",
+        "description": "No matter the size of the rock, this announcement is a big deal, so you’re going to want to make it extra special.",
+        "img": "https://i.ibb.co/z78Synq/engement.png"
+    },
+    {
+        "id": 2,
+        "name": "WEEDING",
+        "price": "100",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/8M0TnNN/weedingg.png"
+    },
+    {
+        "id": 3,
+        "name": "CORPORATE EVENT",
+        "price": "150",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://www.fredericpaulussen.be/wp-content/uploads/2020/05/photography-prices-for-events.jpg"
+    }
+]
