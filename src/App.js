@@ -9,6 +9,7 @@ import Login from './Pages/Verification/Login/Login';
 import SignUp from './Pages/Verification/SignUp/SignUp';
 import RequireAuth from './Pages/Verification/RequireAuth/RequireAuth';
 import Checkout from './Pages/Checkout/Checkout';
+import Blogs from './Pages/Home/Blogs/Blogs';
 
 
 
@@ -25,7 +26,7 @@ function App() {
             <Checkout></Checkout>
           </RequireAuth>
         }></Route>
-
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
       </Routes>
