@@ -16,6 +16,10 @@ h6 {
   word-spacing: 1.1px;
 }
 
+.imgs {
+  object-fit: cover !important;
+}
+
 img {
   object-fit: cover !important;
 }

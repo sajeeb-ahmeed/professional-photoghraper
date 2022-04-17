@@ -12,12 +12,12 @@ const Banner = () => {
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img
-                        className="d-block d-sm-none d-md-none d-lg-none w-100 img-fluid"
+                        className="d-block imgs d-sm-none d-md-none d-lg-none w-100 img-fluid"
                         src={banner4}
                         alt="First slide"
                     />
                     <img
-                        className="d-none d-sm-block d-md-block d-lg-block w-100 img-fluid"
+                        className="d-none imgs d-sm-block d-md-block d-lg-block w-100 img-fluid"
                         src={banner1}
                         alt="First slide"
                     />
@@ -28,12 +28,12 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
                     <img
-                        className="d-block d-sm-none d-md-none d-lg-none w-100 img-fluid"
+                        className="d-block imgs d-sm-none d-md-none d-lg-none w-100 img-fluid"
                         src={banner5}
                         alt="First slide"
                     />
                     <img
-                        className="d-none d-sm-block d-md-block d-lg-block w-100 img-fluid"
+                        className="d-none imgs d-sm-block d-md-block d-lg-block w-100 img-fluid"
                         src={banner2}
                         alt="First slide"
                     />
@@ -44,12 +44,12 @@ const Banner = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block d-sm-none d-md-none d-lg-none w-100 img-fluid"
+                        className="d-block imgs d-sm-none d-md-none d-lg-none w-100 img-fluid"
                         src={banner6}
                         alt="First slide"
                     />
                     <img
-                        className="d-none d-sm-block d-md-block d-lg-block w-100 img-fluid"
+                        className="d-none imgs d-sm-block d-md-block d-lg-block w-100 img-fluid"
                         src={banner3}
                         alt="First slide"
                     />
