@@ -1,12 +1,22 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../../images/logo.png';
-import './Header.css'
+import './Header.css';
+import logoUser from '../../../images/Banner/69.jpg'
 import { VscTwitter } from 'react-icons/vsc';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { TiSocialVimeo } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
+
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <div>
 
@@ -27,9 +37,17 @@ const Header = () => {
                             <Nav.Link as={Link} to='/about'>
                                 About me
                             </Nav.Link>
-                            <Nav.Link as={Link} to='/login'>
-                                Login
-                            </Nav.Link>
+                            {
+                                user ?
+                                    <Nav.Link onClick={logout}>
+                                        Logout  <img className='ms-2 imgs rounded-circle' height={28} src={logoUser} alt="" />
+                                    </Nav.Link>
+
+
+                                    : <Nav.Link as={Link} to='/login'>
+                                        Login
+                                    </Nav.Link>
+                            }
                         </Nav>
 
                         <Nav className='d-none d-lg-flex mx-auto nav_socials'>
