@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import pakege from '../../images/photoghraper/pakeges.png';
+import { BsArrowRightCircleFill } from 'react-icons/bs'
 import './Checkout.css'
 
 const Checkout = () => {
@@ -11,8 +12,8 @@ const Checkout = () => {
             <div className='container mx-auto text-center '>
                 <div className="row mt-5">
                     <div className="col-md-5 col-12">
-                        <h2>Overused marketing phrases</h2>
                         <h2 className='fw-bold'>Congratulations on your <br /> {name} </h2>
+                        <h5>Overused marketing phrases <BsArrowRightCircleFill className='ms-2 fw-bold'></BsArrowRightCircleFill> </h5>
 
                     </div>
                     <div className="col-md-7 col-12 mt-2">

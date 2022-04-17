@@ -2,10 +2,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    overflow-x: hidden;
 }
 
 .cards {
     border-radius: 34px;
+    border: none;
+    background: #f7f7f7;
+    box-shadow: 9px 9px 28px #ffffff,
+        -9px -9px 18px #ffffff;
+}
+
+.cards2 {
+    border-radius: 18px;
+    width: fit-content;
     border: none;
     background: #f7f7f7;
     box-shadow: 9px 9px 28px #bebebe,

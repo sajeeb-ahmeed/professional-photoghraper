@@ -23,7 +23,7 @@ const Photoghraper = () => {
                                 <p>Shahriar Nabi Newaz
                                     is an wedding photography & Cinematography farm that covering events all over the globe.</p>
                                 <small>
-                                    <span className='me-3'> <AiOutlineClockCircle className='me-2'></AiOutlineClockCircle> 4 years on MyWed</span> <span> <FiFlag className='me-2'></FiFlag> I can speak english, bengali, hindi.</span>
+                                    <span className='me-lg-3'> <AiOutlineClockCircle className='me-2'></AiOutlineClockCircle> 4 years on MyWed</span> <span> <FiFlag className='me-2'></FiFlag> I can speak english, bengali, hindi.</span>
                                 </small>
                                 <div className='d-flex mt-2'>
 
@@ -50,7 +50,7 @@ const Photoghraper = () => {
                 </div>
                 <div className="row d-block d-lg-none d-md-none d-sm-none">
                     <div className="col-12">
-                        <img src={info} className='imgs2' alt="" />
+                        <img src={info} className='imgs2 img-fluid' alt="" />
                     </div>
                 </div>
             </div>

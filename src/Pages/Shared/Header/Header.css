@@ -9,6 +9,15 @@
 
 .nav_socials a {
     font-size: 20px;
+
+}
+
+.links a {
+    color: #d7d2d2a5 !important;
+}
+
+.links a:hover {
+    color: #ffffff !important;
 }
 
 .fosvimeoi {

@@ -10,6 +10,7 @@ import SignUp from './Pages/Verification/SignUp/SignUp';
 import RequireAuth from './Pages/Verification/RequireAuth/RequireAuth';
 import Checkout from './Pages/Checkout/Checkout';
 import Blogs from './Pages/Home/Blogs/Blogs';
+import Fotter from './Pages/Shared/Footer/Fotter';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
       </Routes>
+      <Fotter></Fotter>
 
     </div>
   );
