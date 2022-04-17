@@ -1,7 +1,14 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Service = ({ singleService }) => {
+
+    const navigate = useNavigate();
+    const navigateToServiceDetails = (name) => {
+        navigate(`/checkout/${name}`)
+    }
+
     const { id, name, img, description, price } = singleService;
     return (
         <div>
@@ -16,7 +23,7 @@ const Service = ({ singleService }) => {
                         ${price}
                     </Card.Text>
 
-                    <button className="cta">
+                    <button className="cta" onClick={() => navigateToServiceDetails(name)}>
                         <span>Checkout</span>
                         <svg viewBox="0 0 13 10" height="10px" width="15px">
                             <path d="M1,5 L11,5"></path>
