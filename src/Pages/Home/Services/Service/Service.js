@@ -11,7 +11,7 @@ const Service = ({ singleService }) => {
 
     const { id, name, img, description, price } = singleService;
     return (
-        <div>
+        <div >
             <Card className='cards'>
                 <Card.Img className='img-fluid imgs cards' variant="top" src={img} />
                 <Card.Body>
