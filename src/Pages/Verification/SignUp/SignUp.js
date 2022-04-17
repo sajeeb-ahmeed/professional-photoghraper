@@ -1,6 +1,6 @@
 
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../../firebase.init";
@@ -10,29 +10,38 @@ import '../Login/Login.css'
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const SignUp = () => {
-
+    const [sendEmailVerification, sending,] = useSendEmailVerification(auth);
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [updateProfile, updating] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
 
+    // navigate to login 
     const navigateLogin = () => {
         navigate('/login');
     }
 
-    if (loading || updating) {
+    if (loading || updating || sending) {
         return <Loading></Loading>;
     }
 
+    if (error) {
+        // console.log('error', error);
+    }
     if (user) {
-        console.log('user', user);
+        // toast.success('Successfully created');
+    }
+    // email verification 
+    const emailVerification = async () => {
+        await sendEmailVerification();
     }
 
+    // create user profile 
     const handleRegister = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
@@ -41,11 +50,12 @@ const SignUp = () => {
         const confirmPassword = event.target.confirmPassword.value;
 
         if (password === confirmPassword) {
+            emailVerification();
             await createUserWithEmailAndPassword(email, password);
             await updateProfile({ displayName: name });
             // console.log('Successfully created');
-            navigate('/home');
             toast.success('Successfully created');
+            navigate('/home');
         }
         else {
             return toast.error('password mismactched')

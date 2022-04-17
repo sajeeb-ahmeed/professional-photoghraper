@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +19,7 @@ const Login = () => {
         password: "",
         general: "",
     })
-
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const [signInWithEmail, user, loading, hookError] = useSignInWithEmailAndPassword(auth);
 
 
@@ -34,10 +34,6 @@ const Login = () => {
             setErrors({ ...errors, email: "Invalid email" })
             setUserInfo({ ...userInfo, email: "" })
         }
-
-
-
-        // setEmail(e.target.value);
     }
     const handlePasswordChange = (e) => {
         const passwordRegex = /.{6,}/;
@@ -52,14 +48,21 @@ const Login = () => {
         }
 
     }
-
+    // login 
     const handleLogin = (e) => {
         e.preventDefault();
-
         // console.log(userInfo)
-
         signInWithEmail(userInfo.email, userInfo.password);
-
+    }
+    // reset password 
+    const resetPassword = async () => {
+        if (userInfo.email) {
+            await sendPasswordResetEmail();
+            toast.success('Sent Reset Password Emial')
+        }
+        else {
+            toast.error('Please Input Your Email ')
+        }
 
     }
 
@@ -103,7 +106,7 @@ const Login = () => {
                     {errors?.password && <p className="error-message">{errors.password}</p>}
                     <button>Login</button>
 
-                    <p className="mt-2 forget"> Forget password ? <span className="reset">Reset Password </span> </p>
+                    <p className="mt-2 forget"> Forget password ? <span onClick={resetPassword} className="reset">Reset Password </span> </p>
                     <ToastContainer />
 
                     <p className="mt-5">Don't have an account? <Link to="/signup">Sign up </Link> </p>
