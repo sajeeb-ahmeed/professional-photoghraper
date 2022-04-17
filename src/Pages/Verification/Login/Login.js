@@ -56,9 +56,10 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        console.log(userInfo)
+        // console.log(userInfo)
 
         signInWithEmail(userInfo.email, userInfo.password);
+
 
     }
 
@@ -75,18 +76,19 @@ const Login = () => {
     useEffect(() => {
         const error = hookError;
         if (error) {
-            switch (error?.code) {
+            switch (error) {
                 case "auth/invalid-email":
-                    toast("Invalid email provided, please provide a valid email");
+                    toast.error("Invalid email provided, please provide a valid email");
                     break;
 
                 case "auth/invalid-password":
-                    toast("Wrong password. Intruder!!")
+                    toast.error("Wrong password!!")
                     break;
                 default:
-                    toast("something went wrong")
+                    toast("something went wrong , please try again")
             }
         }
+
     }, [hookError])
 
     return (

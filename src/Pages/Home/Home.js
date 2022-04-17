@@ -1,4 +1,5 @@
 import React from 'react';
+import { Toaster } from 'react-hot-toast';
 import Banner from '../Banner/Banner';
 import Expensive from './Expensive/Expensive';
 import Featured from './Featured/Featured';
@@ -11,6 +12,7 @@ import Stories from './STORIES/Stories';
 const Home = () => {
     return (
         <div>
+            <Toaster></Toaster>
             <Banner></Banner>
             <Photoghraper></Photoghraper>
             <Massio></Massio>

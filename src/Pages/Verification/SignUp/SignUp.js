@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
@@ -10,7 +10,7 @@ import '../Login/Login.css'
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const SignUp = () => {
-    const [agree, setAgree] = useState(false);
+
     const [
         createUserWithEmailAndPassword,
         user,
@@ -38,12 +38,19 @@ const SignUp = () => {
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
-        // const agree = event.target.terms.checked;
+        const confirmPassword = event.target.confirmPassword.value;
 
-        await createUserWithEmailAndPassword(email, password);
-        await updateProfile({ displayName: name });
-        console.log('Updated profile');
-        navigate('/home');
+        if (password === confirmPassword) {
+            await createUserWithEmailAndPassword(email, password);
+            await updateProfile({ displayName: name });
+            // console.log('Successfully created');
+            navigate('/home');
+            toast.success('Successfully created');
+        }
+        else {
+            return toast.error('password mismactched')
+        }
+
     }
 
 
@@ -52,16 +59,17 @@ const SignUp = () => {
             <div className="login-container">
                 <div className="login-title">Sign up</div>
                 <form className="login-form" onSubmit={handleRegister}>
-                    <input type="text" name="name" id="" placeholder='Your Name' />
+                    <input type="text" name="name" id="1" placeholder='Your Name' />
 
-                    <input type="email" name="email" id="" placeholder='Email Address' required />
+                    <input type="email" name="email" id="2" placeholder='Email Address' required />
 
-                    <input type="password" name="password" id="" placeholder='Password' required />
+                    <input type="password" name="password" id="3" placeholder='Password' required />
+                    <input type="password" name="confirmPassword" id="4" placeholder='Password' required />
 
                     <button type="submit" value="Register">Sign up</button>
 
                     <ToastContainer />
-                    <p className="mt-5">Already have an account ? <Link to="/login">Login</Link> </p>
+                    <p className="py-3">Already have an account ? <Link onClick={navigateLogin} to="/login">Login</Link> </p> <br />
                 </form>
 
             </div>
