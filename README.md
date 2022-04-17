@@ -1,12 +1,40 @@
-# Getting Started with Create React App
+# Welcome to Massio Photoghrapy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Studio [Massio](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Overused marketing phrases
 
-In the project directory, you can run:
+* Featured 
+              * FEP EUROPEAN PHOTOGRAPHER OF THE YEAR 2020 - Wedding Golden Camera
+                  * With a passion for / We are passionate about / We believe
+              * Make your dreams a reality / Bring your vision to life / Dream wedding
+             *Go the extra mile / Go above and beyond / Take it to the next level
+             *Perfect day / Special day / Best day of your life / Best day ever / Once-in-a-lifetime
+-OR-
 
-### `npm start`
+ ## So what should I do instead?
+* The Essentials
+              * Is this submission addressed to me or my publication?
+                  * Has this shoot been submitted or published elsewhere
+          *The Images 
+          * Have the images been edited in a consistent style for seamless flow?
+
+* Have enough images been supplied to tell a compelling story?
+
+*  How much time will it take to sort through the images and make a selection?
+
+*  Does this shoot feature images that will resonate with our followers on Instagram and Facebook?
+
+*  Does this shoot feature portrait images of details that will appeal on Pinterest?
+
+## Use Tools 
+
+Tools | Assists | Meterials
+| :--- | ---: | :---:
+Racat  JSX | React Bootstrap | Racat Recharts
+ Racat Icons | React Router | Components
+API   | React Dom | Context API
+Vs Code  | Netlity | Google Content 
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
