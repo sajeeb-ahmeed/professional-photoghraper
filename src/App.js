@@ -11,6 +11,7 @@ import RequireAuth from './Pages/Verification/RequireAuth/RequireAuth';
 import Checkout from './Pages/Checkout/Checkout';
 import Blogs from './Pages/Home/Blogs/Blogs';
 import Fotter from './Pages/Shared/Footer/Fotter';
+import Notfound from './Pages/Shared/Notfound/Notfound';
 
 
 
@@ -28,8 +29,10 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<Notfound></Notfound>}></Route>
       </Routes>
       <Fotter></Fotter>
 
