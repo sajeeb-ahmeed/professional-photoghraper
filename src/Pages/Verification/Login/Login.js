@@ -100,9 +100,9 @@ const Login = () => {
             <div className="  login-container">
                 <div className="login-title">LOGIN</div>
                 <form className="login-form" onSubmit={handleLogin}>
-                    <input type="text" placeholder="Your Email" onChange={handleEmailChange} />
+                    <input type="text" placeholder="Your Email" required onChange={handleEmailChange} />
                     {errors?.email && <p className="error-message">{errors.email}</p>}
-                    <input type="password" placeholder="password" onChange={handlePasswordChange} />
+                    <input type="password" placeholder="password" required onChange={handlePasswordChange} />
                     {errors?.password && <p className="error-message">{errors.password}</p>}
                     <button>Login</button>
 

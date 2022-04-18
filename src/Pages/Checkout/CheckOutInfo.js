@@ -58,7 +58,7 @@ const CheckOutInfo = () => {
                             <input value={user?.email} type="email" readOnly name='email' />
                             <input onBlur={handlePhone} type="number" name='phone' placeholder='Number' />
                             <input onBlur={handleAddress} type="text" name='address' placeholder='Address' /> <br />
-                            <textarea className='textarea' onBlur={handleTextarea} name="textarea" id="textarea" cols="30" rows="5" placeholder='Drop your message here ...'></textarea> <br />
+                            <textarea className='textarea form-control w-100' onBlur={handleTextarea} name="textarea" id="textarea" cols="30" rows="5" placeholder='Drop your message here ...'></textarea> <br />
                             <Button className='btn btn-outline-light' variant='dark' type="submit">
                                 Add Check Out
                             </Button>
