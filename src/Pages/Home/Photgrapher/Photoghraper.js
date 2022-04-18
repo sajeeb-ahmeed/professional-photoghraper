@@ -44,7 +44,7 @@ const Photoghraper = () => {
 
                             <div className="col-md-5 col-12 ">
                                 <Link to='/direct_message'>
-                                    <img src={followPng} className='imgs' alt="" />
+                                    <img src={followPng} className='imgs img-fluid' alt="" />
                                 </Link>
                             </div>
                         </div>

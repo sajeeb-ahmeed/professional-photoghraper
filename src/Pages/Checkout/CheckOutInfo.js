@@ -43,12 +43,12 @@ const CheckOutInfo = () => {
         <h5>Name: ${nameS}</h5>
         <h5>Phone: ${phone}</h5>
         <h5>Address: ${address}</h5>
-        <h5>Feedback: ${textArea}</h5>
+        <h5> Feedback: ${textArea}</h5>
         `
 
     }
     return (
-        <div className="container-fluid bg-checkout">
+        <div className="container-fluid bg-checkout my-5">
             <div className='py-4 checkout-container_main container'>
                 <h2 className=' text-center my-5 login-title'> Checkout Information </h2>
                 <div className="row checkout-contain">

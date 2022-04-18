@@ -9,8 +9,8 @@
     height: 540px;
     border-radius: 20px;
     box-sizing: border-box;
-    background: #ecf0f3;
-    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    background: #ecf0f36d;
+    box-shadow: 14px 14px 20px #cbced131, -14px -14px 20px rgba(255, 255, 255, 0.145);
 }
 
 
@@ -32,35 +32,35 @@
 
 .checkout_container label {
     margin-bottom: 4px;
-    color: gray;
+    color: rgb(41, 41, 41);
     margin: 15px 0 5px 5px;
 
 }
 
 .checkout_container input::placeholder {
-    color: gray;
+    color: rgb(40, 40, 40);
 }
 
 .checkout_container input {
-    background: #ecf0f3;
+    background: transparent;
     margin: 15px 0 0 0;
     padding: 10px;
     padding-left: 20px;
     height: 50px;
     font-size: 14px;
     border-radius: 50px;
-    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    box-shadow: inset 6px 6px 6px #cbced1cf, inset -6px -6px 6px rgba(255, 255, 255, 0.841);
 }
 
 .checkout_container button {
     color: white;
     margin-top: 20px;
-    background: #1da1f2;
+    background: #1da0f2e1;
     height: 40px;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 900;
-    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    box-shadow: 6px 6px 6px #cbced1a2, -6px -6px 6px rgba(255, 255, 255, 0.482);
     transition: 0.5s;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .checkout-container_main {
-    background: url(../../images/Banner/6.jpg) no-repeat center center fixed;
+    background: url(../../images/photoghraper/nathan.jpg) no-repeat center center fixed;
     background-size: cover;
     object-fit: cover;
     border-radius: 15px;
@@ -99,5 +99,5 @@
     background: #040b103c;
     color: #fff;
     font-weight: 700;
-    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    box-shadow: 14px 14px 20px #2c2c2c27, -14px -14px 20px rgba(134, 129, 129, 0.218);
 }

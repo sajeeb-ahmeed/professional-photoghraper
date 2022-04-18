@@ -17,7 +17,7 @@ const Checkout = () => {
                         <h5>Overused marketing phrases <BsArrowRightCircleFill className='ms-2 fw-bold'></BsArrowRightCircleFill> </h5>
 
                     </div>
-                    <div className="col-md-7 col-12 mt-2">
+                    <div className="col-md-7 col-12 mt-2 p-lg-2">
                         <p className='mission'>
                             <li> Our mission is to / We are dedicated to / We put a strong emphasis</li>
 
