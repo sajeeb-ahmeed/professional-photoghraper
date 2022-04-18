@@ -35,6 +35,7 @@ const SignUp = () => {
     }
     if (user) {
         // toast.success('Successfully created');
+        navigate('/home');
     }
     // email verification 
     const emailVerification = async () => {
@@ -49,16 +50,21 @@ const SignUp = () => {
         const password = event.target.password.value;
         const confirmPassword = event.target.confirmPassword.value;
 
+        if (password.length < 6) {
+            toast.error('Password is too short', { id: "error" })
+
+            return;
+        }
         if (password === confirmPassword) {
             emailVerification();
             await createUserWithEmailAndPassword(email, password);
+            toast.success(' Account Create Successfully !', { id: "success" })
             await updateProfile({ displayName: name });
             // console.log('Successfully created');
-            toast.success('Successfully created');
             navigate('/home');
         }
         else {
-            return toast.error('password mismactched')
+            return toast.error('password mismactched', { id: "wrong password" })
         }
 
     }

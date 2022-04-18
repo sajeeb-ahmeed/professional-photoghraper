@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import pakege from '../../images/photoghraper/pakeges.png';
 import { BsArrowRightCircleFill } from 'react-icons/bs'
 import './Checkout.css'
+import CheckOutInfo from './CheckOutInfo';
 
 const Checkout = () => {
     const { name } = useParams();
@@ -10,8 +11,8 @@ const Checkout = () => {
     return (
         <div className="container-fluid bg-photghraper py-2">
             <div className='container mx-auto text-center '>
-                <div className="row mt-5">
-                    <div className="col-md-5 col-12">
+                <div className="row mt-5 cards">
+                    <div className="col-md-5 col-12 p-lg-5">
                         <h2 className='fw-bold'>Congratulations on your <br /> {name} </h2>
                         <h5>Overused marketing phrases <BsArrowRightCircleFill className='ms-2 fw-bold'></BsArrowRightCircleFill> </h5>
 
@@ -33,12 +34,20 @@ const Checkout = () => {
                         </p>
                     </div>
                 </div>
-                <div className="my-5 ">
-                    <h3 className=''>Thanks For Check out : {name} 💖 </h3>
+                <div className="row">
+                    <div className="col-md-12 col-12">
+                        <CheckOutInfo>
+                            <h3 className=''>Thanks For Check out : {name} 💖 </h3>
+                        </CheckOutInfo>
+                    </div>
                 </div>
-                <div className="img-fluid">
-                    <img src={pakege} className='img-fluid imgs' alt="" />
+                <div className="row text-center">
+
+                    <div className="img-fluid col-md-12 col-12">
+                        <img src={pakege} className='img-fluid imgs' alt="" />
+                    </div>
                 </div>
+
 
             </div>
         </div>

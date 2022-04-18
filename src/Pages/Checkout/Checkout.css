@@ -2,3 +2,102 @@
     text-align: left;
     text-justify: newspaper;
 }
+
+.checkout_container {
+    position: relative;
+    width: 365px;
+    height: 540px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+
+.login-form {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.checkout_container label,
+.checkout_container input,
+.checkout_container button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.checkout_container label {
+    margin-bottom: 4px;
+    color: gray;
+    margin: 15px 0 5px 5px;
+
+}
+
+.checkout_container input::placeholder {
+    color: gray;
+}
+
+.checkout_container input {
+    background: #ecf0f3;
+    margin: 15px 0 0 0;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.checkout_container button {
+    color: white;
+    margin-top: 20px;
+    background: #1da1f2;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+
+.checkout_container button:hover {
+    box-shadow: none;
+}
+
+.textarea {
+    background-color: transparent;
+}
+
+.checkout-contain {
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkout-container_main {
+    background: url(../../images/Banner/6.jpg) no-repeat center center fixed;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 15px;
+    opacity: 0.9;
+
+}
+
+
+
+.infoCheckout {
+    height: 400px;
+    width: auto;
+}
+
+.infoCheckout {
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: #040b103c;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
