@@ -17,7 +17,7 @@ const Service = ({ singleService }) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        {description}
+                        {description.slice(0, 115) + '...'}
                     </Card.Text>
                     <Card.Text>
                         ${price}
