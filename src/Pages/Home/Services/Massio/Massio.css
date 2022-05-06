@@ -5,16 +5,42 @@
 }
 
 .caitlyn_pera {
-    letter-spacing: 1px;
+    letter-spacing: normal;
     word-spacing: 1.3px;
+    font-size: 15px;
 }
 
 .awrad {
     font-size: 26px;
 }
 
+.texttel {
+    color: rgb(45, 45, 45);
+    text-decoration: none;
+}
+
+.texttel2 {
+    color: rgb(67, 67, 67);
+    text-decoration: none;
+}
+
+.texttel:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.texttel2:hover {
+    color: rgb(70, 61, 133);
+    text-decoration: none;
+}
+
+.bookmark {
+    font-size: 24px;
+}
+
 .best {
-    font-weight: 900;
+    font-weight: 700;
+    font-size: 12px;
     letter-spacing: normal;
 }
 

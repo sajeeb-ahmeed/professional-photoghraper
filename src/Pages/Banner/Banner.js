@@ -22,8 +22,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>JENY & JOE</h3>
-                        <p>“I need you like a heart needs a beat.” – Unknown</p>
+                        <h3 className='d-sm-block d-md-block d-lg-block d-none'> JOE</h3>
+                        <p className='d-sm-block d-md-block d-lg-block d-none'>“I need you like a heart needs a beat.” – Unknown</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
@@ -38,8 +38,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>KATE & KEVIN</h3>
-                        <p>“If I know what love is, it is because of you.” – Hermann Hesse</p>
+                        <h3 className='d-sm-block d-md-block d-lg-block d-none'> KEVIN</h3>
+                        <p className='d-sm-block d-md-block d-lg-block d-none'>“If I know what love is, it is because of you.” – Hermann Hesse</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -54,8 +54,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>FIDA & TUKTUKI</h3>
-                        <p>“You call it madness, but I call it love.”</p>
+                        <h3 className='d-sm-block d-md-block d-lg-block d-none'>FIDA</h3>
+                        <p className='d-sm-block d-md-block d-lg-block d-none'>“You call it madness, but I call it love.”</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

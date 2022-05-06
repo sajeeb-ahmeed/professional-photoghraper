@@ -10,6 +10,7 @@ const RequireAuth = ({ children }) => {
 
 
     if (loading) {
+        console.log('loading ');
         return <Loading></Loading>
     }
 

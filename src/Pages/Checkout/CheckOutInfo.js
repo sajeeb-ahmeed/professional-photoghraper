@@ -39,11 +39,12 @@ const CheckOutInfo = () => {
         event.preventDefault();
         shipping.classList = ' infoCheckout carts p-4'
         shipping.innerHTML = `
-        <h3 className=''>Thanks For Check out : ${name} 💖 </h3>
-        <h5>Name: ${nameS}</h5>
-        <h5>Phone: ${phone}</h5>
-        <h5>Address: ${address}</h5>
-        <h5> Feedback: ${textArea}</h5>
+        <h3 className=''>Thanks For Check out  ${name ? ': ' + name : ''} 💖 </h3>
+        <h5> ${'Thanks ' + user?.email}</h5>
+        <h5> ${nameS ? 'Name: ' + nameS : ''}</h5>
+        <h5> ${phone ? 'Phone: ' + phone : ''}</h5>
+        <h5> ${address ? 'Address: ' + address : ''}</h5>
+        <h5>  ${textArea ? 'Feedback: ' + textArea : ''}</h5>
         `
 
     }
@@ -54,11 +55,16 @@ const CheckOutInfo = () => {
                 <div className="row checkout-contain">
                     <div className="col-md-6 col-12 checkout_container ">
                         <Form onSubmit={handleShippingUser} className=''>
-                            <input onBlur={handleName} name='text' type="text" placeholder="Name" required />
-                            <input value={user?.email} type="email" readOnly name='email' />
+
+                            <input onBlur={handleName} name='text' type="text" placeholder="Name" />
+
+                            <input value={user?.email} className='text-dark' type="email" readOnly name='email' />
+
                             <input onBlur={handlePhone} type="number" name='phone' placeholder='Number' />
+
                             <input onBlur={handleAddress} type="text" name='address' placeholder='Address' /> <br />
-                            <textarea className='textarea form-control w-100' onBlur={handleTextarea} name="textarea" id="textarea" cols="30" rows="5" placeholder='Drop your message here ...'></textarea> <br />
+                            <label htmlFor="text">Your message</label>
+                            <textarea className='textarea form-control w-100' onBlur={handleTextarea} name="textarea" id="textarea" cols="30" rows="4" placeholder='Drop your message here ...'></textarea> <br />
                             <Button className='btn btn-outline-light' variant='dark' type="submit">
                                 Add Check Out
                             </Button>

@@ -13,7 +13,7 @@ const Checkout = () => {
             <div className='container mx-auto text-center '>
                 <div className="row mt-5 cards">
                     <div className="col-md-5 col-12 p-lg-5">
-                        <h2 className='fw-bold'>Congratulations on your <br /> {name} </h2>
+                        <h2 className='fw-bold'>Congratulations on your <br /> {name ? name : ''} </h2>
                         <h5>Overused marketing phrases <BsArrowRightCircleFill className='ms-2 fw-bold'></BsArrowRightCircleFill> </h5>
 
                     </div>
@@ -37,7 +37,7 @@ const Checkout = () => {
                 <div className="row">
                     <div className="col-md-12 col-12">
                         <CheckOutInfo>
-                            <h3 className=''>Thanks For Check out : {name} 💖 </h3>
+                            <h3 className=''>Thanks For Check out : {name ? name : ''} 💖 </h3>
                         </CheckOutInfo>
                     </div>
                 </div>

@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "name": "ENAGEMENT",
+        "name": "ENGAGEMENT",
         "price": "895",
         "description": "No matter the size of the rock, this announcement is a big deal, so you’re going to want to make it extra special.",
         "img": "https://i.ibb.co/z78Synq/engement.png"
     },
     {
         "id": 2,
-        "name": "WEEDING",
+        "name": "WEDDING",
         "price": "699",
         "description": "“Most of my photos are grounded in people. I look for the unguarded moment, the essential soul peeking out, experience etched on a person’s face.”.",
         "img": "https://i.ibb.co/8M0TnNN/weedingg.png"

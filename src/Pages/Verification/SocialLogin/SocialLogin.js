@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './SocialLogin.css';
 import { FcGoogle } from 'react-icons/fc'
+import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -13,11 +14,12 @@ const SocialLogin = () => {
     let errorElement;
 
     if (loading) {
-        console.log('loading component asbe shared theke');
+        // console.log('loading component asbe shared theke');
+        return <Loading></Loading>
     }
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>;
     }
 
     if (user) {

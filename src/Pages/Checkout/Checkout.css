@@ -5,7 +5,7 @@
 
 .checkout_container {
     width: 365px;
-    height: 540px;
+    height: auto;
     border-radius: 20px;
     box-sizing: border-box;
     background: #ecf0f36d;
@@ -33,7 +33,7 @@
     margin-bottom: 4px;
     color: rgb(41, 41, 41);
     margin: 15px 0 5px 5px;
-
+    text-align: left;
 }
 
 .checkout_container input::placeholder {
@@ -77,7 +77,9 @@
 }
 
 @media only screen and (max-width:576px) {
-    textarea {}
+    textarea {
+        width: 95%;
+    }
 }
 
 .checkout-container_main {
